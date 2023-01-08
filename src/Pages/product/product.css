@@ -1,0 +1,126 @@
+.product {
+  flex: 4;
+  padding: 20px;
+}
+
+.productTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productAddButton {
+  width: 80px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(189, 245, 189);
+  color: rgb(3, 123, 3);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.productTop {
+  display: flex;
+}
+
+.productTopLeft,
+.productTopRight {
+  flex: 1;
+}
+
+.productTopRight {
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+  box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+}
+
+.productInfoImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.productInfoTop {
+  display: flex;
+  align-items: center;
+}
+
+.productName {
+  font-weight: 600;
+}
+
+.productInfoBottom {
+  margin-top: 10px;
+}
+
+.productInfoItem {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productBottom {
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+  box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+}
+
+.productForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productFormLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.productFormLeft > label {
+  margin-bottom: 10px;
+}
+
+.productFormLeft > input {
+  margin-bottom: 10px;
+  border: none;
+  padding: 5px;
+  border-bottom: 1px solid rgb(19, 164, 113);
+}
+
+.productButton {
+  width: 80px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(189, 245, 189);
+  color: rgb(3, 123, 3);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.productFormLeft > select {
+  margin-bottom: 10px;
+  border-color: rgb(19, 164, 113);
+}
+
+.productUploadImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 5px;
+  border: 1px solid rgb(19, 164, 113);
+}
+
+.productFormRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.productUpload {
+  display: flex;
+  align-items: center;
+}
