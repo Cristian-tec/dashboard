@@ -13,8 +13,8 @@
   width: 80px;
   border: none;
   padding: 10px;
-  background-color: rgb(189, 245, 189);
-  color: rgb(3, 123, 3);
+  background-color: #e49f36;
+  color: black;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -31,8 +31,8 @@
 .productTopRight {
   padding: 20px;
   margin: 20px;
-  -webkit-box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
-  box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+  -webkit-box-shadow: 2px 2px 6px 1px #e49f36;
+  box-shadow: 2px 2px 6px 1px #e49f36;
 }
 
 .productInfoImg {
@@ -65,8 +65,8 @@
 .productBottom {
   padding: 20px;
   margin: 20px;
-  -webkit-box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
-  box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+  -webkit-box-shadow: 2px 2px 6px 1px #e49f36;
+  box-shadow: 2px 2px 6px 1px #e49f36;
 }
 
 .productForm {
@@ -87,14 +87,14 @@
   margin-bottom: 10px;
   border: none;
   padding: 5px;
-  border-bottom: 1px solid rgb(19, 164, 113);
+  border-bottom: 1px solid #e49f36;
 }
 
 .productButton {
   width: 80px;
   border: none;
   padding: 10px;
-  background-color: rgb(189, 245, 189);
+  background-color: #e49f36;
   color: rgb(3, 123, 3);
   border-radius: 10px;
   cursor: pointer;
@@ -102,7 +102,7 @@
 
 .productFormLeft > select {
   margin-bottom: 10px;
-  border-color: rgb(19, 164, 113);
+  border-color: #e49f36;
 }
 
 .productUploadImg {
@@ -111,7 +111,7 @@
   border-radius: 10px;
   object-fit: cover;
   margin-right: 5px;
-  border: 1px solid rgb(19, 164, 113);
+  border: 1px solid #e49f36;
 }
 
 .productFormRight {

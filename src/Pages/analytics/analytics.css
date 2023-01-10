@@ -1,0 +1,9 @@
+.analytics {
+  flex: 4;
+}
+
+.containerGraphs {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+}

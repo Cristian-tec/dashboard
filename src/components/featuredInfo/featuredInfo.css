@@ -9,8 +9,8 @@
   padding: 30px;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
-  box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+  -webkit-box-shadow: 2px 2px 6px 1px #e49f36;
+  box-shadow: 2px 2px 6px 1px #e49f36;
 }
 .featuredTitle {
   font-style: 20px;

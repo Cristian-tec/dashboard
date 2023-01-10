@@ -1,12 +1,12 @@
 import React from "react";
-import "./productList.css";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import "./transactions.css";
+import { DataGrid } from "@mui/x-data-grid";
 import { DeleteOutlined } from "@mui/icons-material";
 import { productRows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function ProductList() {
+export default function Transactions() {
   const [data, setData] = useState(productRows);
 
   const handleDelete = (id) => {
@@ -39,28 +39,10 @@ export default function ProductList() {
       headerName: "Price",
       width: 200,
     },
-    {
-      field: "action",
-      headerName: "Action",
-      width: 150,
-      renderCell: (params) => {
-        return (
-          <>
-            <Link to={"/product/" + params.row.id}>
-              <button className="productListEdit">Edit</button>
-            </Link>
-            <DeleteOutlined
-              className="productListDelete"
-              onClick={() => handleDelete(params.row.id)}
-            />
-          </>
-        );
-      },
-    },
   ];
 
   return (
-    <div className="productList">
+    <div className="transactionsList">
       <DataGrid
         rows={data}
         disableSelectionOnClick

@@ -13,8 +13,8 @@
   width: 80px;
   border: none;
   padding: 10px;
-  background-color: rgb(189, 245, 189);
-  color: rgb(3, 123, 3);
+  background-color: #e49f36;
+  color: black;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -27,15 +27,15 @@
 .userShow {
   flex: 1;
   padding: 20px;
-  -webkit-box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
-  box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+  -webkit-box-shadow: 2px 2px 6px 1px #e49f36;
+  box-shadow: 2px 2px 6px 1px #e49f36;
 }
 
 .userUpdate {
   flex: 2;
   padding: 20px;
-  -webkit-box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
-  box-shadow: 2px 2px 6px 1px rgba(49, 238, 171, 0.46);
+  -webkit-box-shadow: 2px 2px 6px 1px #e49f36;
+  box-shadow: 2px 2px 6px 1px #e49f36;
   margin-left: 20px;
 }
 
@@ -116,7 +116,7 @@
   border: none;
   width: 250px;
   height: 30px;
-  border-bottom: 1px solid rgb(19, 164, 113);
+  border-bottom: 1px solid #e49f36;
 }
 
 .userUpdateRight {
@@ -146,8 +146,8 @@
   width: 80px;
   border: none;
   padding: 10px;
-  background-color: rgb(189, 245, 189);
-  color: rgb(3, 123, 3);
+  background-color: #e49f36;
+  color: black;
   border-radius: 10px;
   cursor: pointer;
 }

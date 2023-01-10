@@ -26,7 +26,7 @@
 .newUserItem > input {
   height: 20px;
   padding: 10px;
-  border: 1px solid rgb(19, 164, 113);
+  border: 1px solid #e49f36;
   border-radius: 10px;
   margin-left: 20px;
 }
@@ -53,8 +53,8 @@
   height: 40px;
   border: none;
   padding: 10px;
-  background-color: rgb(189, 245, 189);
-  color: rgb(3, 123, 3);
+  background-color: #e49f36;
+  color: black;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 40px;
