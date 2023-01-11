@@ -4,8 +4,24 @@ import "./product.css";
 import Chart from "../../components/chart/Chart";
 import { productData } from "../../dummyData";
 import { Publish } from "@mui/icons-material";
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
-export default function Product() {
+export default function Product(props) {
+
+  const { productId } = useParams(); 
+
+  //console.log(productId);
+
+  const getProductDetail = async () =>{
+
+    const response  = await axios.get("https://test-deploy-production-3b4b.up.railway.app/products/2")
+    console.log(response.data);
+  }
+
+  getProductDetail();
+
+
   return (
     <div className="product">
       <div className="productTitleContainer">
