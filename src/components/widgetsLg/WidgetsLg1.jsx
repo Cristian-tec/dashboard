@@ -23,9 +23,9 @@ export default function widgetsLg() {
               className="widgetLgImg"
               alt="User 1"
             />
-            <span className="widgetLgName">Susana Álvarez</span>
+            <span className="widgetLgName">Susan Carol</span>
           </td>
-          <td className="widgetLgDate">10/01/2023</td>
+          <td className="widgetLgDate">2 Jun 2022</td>
           <td className="widgetLgAmount">122.00</td>
           <td className="widgetLgStatus">
             <Button type="Approved" />
@@ -34,14 +34,14 @@ export default function widgetsLg() {
         <tr className="widgetLgTr">
           <td className="widgetLgUser">
             <img
-              src="https://res.cloudinary.com/dqdrtbtuv/image/upload/v1671988547/Dashboard/4._CWBTJ7EEAJFPBLBZG7DJP24LUI_diwe2r.jpg"
+              src="https://res.cloudinary.com/dqdrtbtuv/image/upload/v1671834551/Dashboard/peinados-para-caras-cuadradas6_eivhpk.jpg"
               className="widgetLgImg"
-              alt="User 2"
+              alt="User 1"
             />
-            <span className="widgetLgName">Jorge Ceballos</span>
+            <span className="widgetLgName">Susan Carol</span>
           </td>
-          <td className="widgetLgDate">09/01/2023</td>
-          <td className="widgetLgAmount">240.00</td>
+          <td className="widgetLgDate">2 Jun 2022</td>
+          <td className="widgetLgAmount">122.00</td>
           <td className="widgetLgStatus">
             <Button type="Declined" />
           </td>
@@ -49,16 +49,31 @@ export default function widgetsLg() {
         <tr className="widgetLgTr">
           <td className="widgetLgUser">
             <img
-              src="https://res.cloudinary.com/dqdrtbtuv/image/upload/v1671988547/Dashboard/7._Persona-1-445x445_sxgudu.jpg"
+              src="https://res.cloudinary.com/dqdrtbtuv/image/upload/v1671834551/Dashboard/peinados-para-caras-cuadradas6_eivhpk.jpg"
               className="widgetLgImg"
-              alt="User 3"
+              alt="User 1"
             />
-            <span className="widgetLgName">Mario González</span>
+            <span className="widgetLgName">Susan Carol</span>
           </td>
-          <td className="widgetLgDate">10/01/2023</td>
-          <td className="widgetLgAmount">45.00</td>
+          <td className="widgetLgDate">2 Jun 2022</td>
+          <td className="widgetLgAmount">122.00</td>
           <td className="widgetLgStatus">
             <Button type="Pending" />
+          </td>
+        </tr>
+        <tr className="widgetLgTr">
+          <td className="widgetLgUser">
+            <img
+              src="https://res.cloudinary.com/dqdrtbtuv/image/upload/v1671834551/Dashboard/peinados-para-caras-cuadradas6_eivhpk.jpg"
+              className="widgetLgImg"
+              alt="User 1"
+            />
+            <span className="widgetLgName">Susan Carol</span>
+          </td>
+          <td className="widgetLgDate">2 Jun 2022</td>
+          <td className="widgetLgAmount">122.00</td>
+          <td className="widgetLgStatus">
+            <Button type="Approved" />
           </td>
         </tr>
       </table>

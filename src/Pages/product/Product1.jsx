@@ -5,10 +5,11 @@ import Chart from "../../components/chart/Chart";
 import { productData } from "../../dummyData";
 import { useState, useEffect } from "react";
 import { Publish } from "@mui/icons-material";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 export default function Product(props) {
+
   const { productId } = useParams();
 
   //console.log(productId);
@@ -16,18 +17,22 @@ export default function Product(props) {
   const [data, setData] = useState();
 
   const getProductDetail = async () => {
-    const response = await axios.get(
-      `https://test-deploy-production-3b4b.up.railway.app/products/${productId}`
-    );
+
+    const response = await axios.get(`https://test-deploy-production-3b4b.up.railway.app/products/${productId}`)
     console.log(response.data);
     setData(response.data);
-  };
+  }
+
+
 
   useEffect(() => {
+
     getProductDetail();
-  }, []);
+
+  }, [])
 
   if (data) {
+
     return (
       <div className="product">
         <div className="productTitleContainer">
@@ -47,7 +52,11 @@ export default function Product(props) {
           </div>
           <div className="productTopRight">
             <div className="productInfoTop">
-              <img src={data[0].image} alt="" className="productInfoImg" />
+              <img
+                src={data[0].image}
+                alt=""
+                className="productInfoImg"
+              />
               <span className="productName">{data[0].name}</span>
             </div>
             <div className="productInfoBottom">
@@ -56,8 +65,8 @@ export default function Product(props) {
                 <span className="productInfoValue">{data[0].id}</span>
               </div>
               <div className="productInfoItem">
-                <span className="prductInfoKey">Price:</span>
-                <span className="productInfoValue">{data[0].price}</span>
+                <span className="prductInfoKey">sales:</span>
+                <span className="productInfoValue">$123</span>
               </div>
               <div className="productInfoItem">
                 <span className="prductInfoKey">active:</span>
@@ -65,7 +74,7 @@ export default function Product(props) {
               </div>
               <div className="productInfoItem">
                 <span className="prductInfoKey">in stock:</span>
-                <span className="productInfoValue">Yes</span>
+                <span className="productInfoValue">No</span>
               </div>
             </div>
           </div>
@@ -88,7 +97,11 @@ export default function Product(props) {
             </div>
             <div className="productFormRight">
               <div className="productUpload">
-                <img src={data[0].image} alt="" className="productUploadImg" />
+                <img
+                  src={data[0].image}
+                  alt=""
+                  className="productUploadImg"
+                />
                 <label for="file">
                   <Publish />
                 </label>
@@ -100,6 +113,7 @@ export default function Product(props) {
         </div>
       </div>
     );
+
   } else {
     return (
       <div className="product">
@@ -130,11 +144,11 @@ export default function Product(props) {
             <div className="productInfoBottom">
               <div className="productInfoItem">
                 <span className="prductInfoKey">id:</span>
-                <span className="productInfoValue">Loading...</span>
+                <span className="productInfoValue">123</span>
               </div>
               <div className="productInfoItem">
-                <span className="prductInfoKey">sales:</span>
-                <span className="productInfoValue">$Loading...</span>
+                <span className="prductInfoKey">salesXXXXXX:</span>
+                <span className="productInfoValue">$123</span>
               </div>
               <div className="productInfoItem">
                 <span className="prductInfoKey">active:</span>
