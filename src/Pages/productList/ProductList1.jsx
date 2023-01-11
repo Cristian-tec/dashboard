@@ -1,41 +1,17 @@
 import React from "react";
 import "./productList.css";
-import { DataGrid } from "@mui/x-data-grid";
-import { DeleteOutlined, LineAxisOutlined } from "@mui/icons-material";
-//import { productRows } from "../../dummyData";
+import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { DeleteOutlined } from "@mui/icons-material";
+import { productRows } from "../../dummyData";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 export default function ProductList() {
-  const productRows = [
-    {
-      id: "",
-      product: "loading...",
-      stock: "loading...",
-      price: "loading...",
-      image: "https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif",
-    },
-  ];
-
   const [data, setData] = useState(productRows);
-
-  let productsLog;
-  const productsRegisters = async () => {
-    productsLog = await axios.get(
-      "https://test-deploy-production-3b4b.up.railway.app/products"
-    );
-    console.log(productsLog.data);
-    setData(productsLog.data);
-  };
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
-
-  useEffect(() => {
-    productsRegisters();
-  }, []);
 
   const columns = [
     { field: "id", headerName: "ID", width: 70 },
@@ -46,16 +22,17 @@ export default function ProductList() {
       renderCell: (params) => {
         return (
           <div className="productListItem">
-            <img className="productListImg" src={params.row.image} alt="" />
+            <img className="productListImg" src={params.row.img} alt="" />
             {params.row.name}
           </div>
         );
       },
     },
+    { field: "stock", headerName: "Stock", width: 200 },
     {
-      field: "stock",
-      headerName: "Stock",
-      width: 200,
+      field: "status",
+      headerName: "Status",
+      width: 120,
     },
     {
       field: "price",
