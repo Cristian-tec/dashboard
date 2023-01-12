@@ -4,7 +4,7 @@ import Chart from "../../components/chart/Chart";
 import "./home.css";
 import { userData } from "../../dummyData";
 import WidgetsSm from "../../components/widgetsSm/WidgetsSm";
-import WidgetsLg from "../../components/widgetsLg/WidgetsLg";
+import WidgetsLg from "../../components/widgetsLg/WidgetsLg"
 
 export default function Home() {
   return (
