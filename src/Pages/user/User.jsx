@@ -58,7 +58,12 @@ export default function User(props) {
         password: password
       };
       const update = await axios.put("https://test-deploy-production-3b4b.up.railway.app/user", dat)
-      console.log(update);
+      if(update){
+        alert('Success Update')
+      }else{
+        alert('Failure Update')
+      }
+      // console.log(update);
     }
 
   }
