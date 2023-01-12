@@ -32,9 +32,9 @@ export default function Product(props) {
       <div className="product">
         <div className="productTitleContainer">
           <h1 className="productTitle">Product</h1>
-          <Link to="/newProduct">
+         {/*  <Link to="/newProduct">
             <button className="productAddButton">Create</button>
-          </Link>
+          </Link> */}
         </div>
         <div className="productTop">
           <div className="productTopLeft">
@@ -94,7 +94,7 @@ export default function Product(props) {
                 </label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>
-              <button className="productButton">Update</button>
+             {/*  <button className="productButton">Update</button> */}
             </div>
           </form>
         </div>
