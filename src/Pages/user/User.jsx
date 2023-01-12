@@ -26,7 +26,7 @@ export default function User(props) {
 
   const getUser = async () => {
 
-    user = await axios.post("https://test-deploy-production-3b4b.up.railway.app/user/one", {email: userId})
+    user = await axios.post("https://test-deploy-production-3b4b.up.railway.app/user/one", { email: userId })
     setData(user.data)
     console.log(data);
   }
@@ -37,7 +37,33 @@ export default function User(props) {
 
   }, [])
 
-  if(data){
+  const updateUser = async (e) => {
+    e.preventDefault();
+    let first_name = document.getElementById('first_name').value;
+    let last_name = document.getElementById('last_name').value;
+    let address = document.getElementById('address').value;
+    let phone_number = document.getElementById('phone_number').value;
+    let password = document.getElementById('password').value;
+
+    if (!first_name || !address || !phone_number || !last_name || !password) {
+      alert("Debes llenar todos los campos!");
+    } else {
+      //console.log(first_name, last_name, address, phone_number, password);
+      let dat = {
+        email: data.email,
+        first_name: first_name,
+        last_name: last_name,
+        address: address,
+        phone_number: phone_number,
+        password: password
+      };
+      const update = await axios.put("https://test-deploy-production-3b4b.up.railway.app/user", dat)
+      console.log(update);
+    }
+
+  }
+
+  if (data) {
     return (
       <div className="user">
         <div className="userTitleContainer">
@@ -89,27 +115,31 @@ export default function User(props) {
             <form className="userUpdateForm">
               <div className="userUpdateLeft">
                 <div className="userUpdateItem">
-                  <label>Username</label>
+                  <label>First Name</label>
                   <input
                     type="text"
-                    placeholder={data.name}
+                    placeholder={data.first_name}
                     className="userUpdateInput"
+                    id="first_name"
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Full Name</label>
+                  <label>Last Name</label>
                   <input
                     type="text"
-                    placeholder={data.first_name + ' ' + data.last_name}
+                    placeholder={data.last_name}
                     className="userUpdateInput"
+                    id='last_name'
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Email</label>
+                  <label>Password</label>
                   <input
-                    type="text"
-                    placeholder={data.email}
-                    className="userUpdateInput"
+                    type="password"
+                    //placeholder={data.email}
+                    className="password"
+                    /* value={data.email} */
+                    id='password'
                   />
                 </div>
                 <div className="userUpdateItem">
@@ -118,6 +148,7 @@ export default function User(props) {
                     type="text"
                     placeholder={data.phone_number}
                     className="userUpdateInput"
+                    id='phone_number'
                   />
                 </div>
                 <div className="userUpdateItem">
@@ -126,6 +157,7 @@ export default function User(props) {
                     type="text"
                     placeholder={data.address}
                     className="userUpdateInput"
+                    id='address'
                   />
                 </div>
               </div>
@@ -133,22 +165,22 @@ export default function User(props) {
                 <div className="userUpdateUpload">
                   <img
                     src={data.picture}
-                    alt=""
+                    alt="image"
                     className="userUpdateImg"
                   />
                   <label htmlFor="file">
-                    <PublishOutlined className="userUpdateIcon" />
+                    {/*    <PublishOutlined className="userUpdateIcon" /> */}
                   </label>
                   <input type="file" id="file" style={{ display: "none" }} />
                 </div>
-                <button className="userUpdateButton">Update</button>
+                <button onClick={updateUser} className="userUpdateButton">Update</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     );
-  }else{
+  } else {
     return (
       <div className="user">
         <div className="userTitleContainer">
@@ -208,7 +240,7 @@ export default function User(props) {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Full Name</label>
+                  <label>First Name</label>
                   <input
                     type="text"
                     placeholder="Loading..."
